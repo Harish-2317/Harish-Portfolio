@@ -182,3 +182,80 @@
   padding: 0;
   text-align: center;
 }
+
+/* ===========================
+   Skill pill 3D + ripple
+   =========================== */
+
+.skill-pill {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  cursor: pointer;
+
+  /* Smooth transforms */
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  transform-style: preserve-3d;
+}
+
+/* Ripple element */
+.skill-pill::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.45) 0,
+    transparent 70%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    width 0.4s ease,
+    height 0.4s ease,
+    opacity 0.4s ease;
+}
+
+/* Desktop hover / keyboard focus: 3D tilt + glow */
+.skill-pill:hover,
+.skill-pill:focus-visible {
+  transform: perspective(600px) rotateX(6deg) rotateY(-6deg) translateY(-2px)
+    scale(1.05);
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.6);
+}
+
+/* Click / tap: stronger 3D + ripple */
+.skill-pill:active {
+  transform: perspective(600px) rotateX(3deg) rotateY(3deg) scale(0.98);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+}
+
+.skill-pill:active::after {
+  width: 220%;
+  height: 220%;
+  opacity: 1;
+}
+
+/* Tune behavior for touch devices (mobile) */
+@media (hover: none) and (pointer: coarse) {
+  .skill-pill {
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease;
+  }
+
+  .skill-pill:active {
+    transform: perspective(600px) rotateX(4deg) rotateY(-4deg) scale(1.02);
+  }
+}
+
+
+
