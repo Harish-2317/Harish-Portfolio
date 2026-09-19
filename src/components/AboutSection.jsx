@@ -52,7 +52,9 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> Academic Excellence</h4>
                   <p className="text-muted-foreground">
-                    CGPA: 7.80 in BCA from St. Thomas College of Arts & Science.
+                    MCA | CGPA: Pursuing | SRM Institute of Science and Technology.
+                    <br />
+                    BCA Graduate | CGPA: 8.22 | St. Thomas College of Arts & Science
                   </p>
                 </div>
               </div>
@@ -63,10 +65,9 @@ export const AboutSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">NSS volunteer </h4>
+                  <h4 className="font-semibold text-lg">Internship Experience</h4>
                   <p className="text-muted-foreground">
-                    NSS volunteer with hands-on experience in community outreach and service activities. 
-                  </p>
+                    Gained hands-on experience at Chennai Metro Rail Limited (CMRL), Codec Technologies, and Skillforge, working in full-stack, MERN, and web development. Built responsive applications and gained practical experience in frontend, backend, and debugging                  </p>
                 </div>
               </div>
             </div>
@@ -77,9 +78,9 @@ export const AboutSection = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Internship Experience</h4>
+                  <h4 className="font-semibold text-lg">NSS volunteer </h4>
                   <p className="text-muted-foreground">
-                    Enhanced skillset in Web Development at SkillForge and MERN Stack development at Codex Technologies Pvt. Ltd.
+                    NSS volunteer with hands-on experience in community outreach and service activities.
                   </p>
                 </div>
               </div>
